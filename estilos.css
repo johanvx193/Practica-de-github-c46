@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
+    padding: 20px;
+}
+
+/* Tarjeta contenedora principal */
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    padding: 50px 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Espacio uniforme entre título, párrafo y botón */
+}
+
+/* Título con degradado */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+/* Párrafo de bienvenida */
+.bienvenida {
+    font-size: 1.05rem;
+    color: #94a3b8; /* Gris suave para mejor lectura */
+    line-height: 1.6;
+}
+
+/* Botón interactivo */
+.btn-contacto {
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    color: #0f172a;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    align-self: center; /* Centra el botón horizontalmente */
+}
+
+/* Efectos para el botón */
+.btn-contacto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+
+.btn-contacto:active {
+    transform: translateY(0);
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 480px) {
+    .card {
+        padding: 35px 20px;
+    }
+    h1 {
+        font-size: 1.7rem;
+    }
+    .bienvenida {
+        font-size: 0.95rem;
+    }
+}
